@@ -1,0 +1,108 @@
+@import "main-stylesheet";
+
+.side {
+    .listing {
+        .listing-cards {
+            height: 100%;
+            .card {
+                .img-container {
+                    background-color: #ccc1;
+                }
+            }
+            .liked-titles {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                @include box-radius(5px);
+                $color: white;
+                height: 95%;
+                padding: 1rem;
+                background: rgb(0, 90, 209); /* Old browsers */
+                background: -moz-linear-gradient(
+                    -45deg,
+                    rgba(0, 90, 209, 1) 0%,
+                    rgba(188, 179, 224, 1) 100%
+                ); /* FF3.6-15 */
+                background: -webkit-linear-gradient(
+                    -45deg,
+                    rgba(0, 90, 209, 1) 0%,
+                    rgba(188, 179, 224, 1) 100%
+                ); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(
+                    135deg,
+                    rgba(0, 90, 209, 1) 0%,
+                    rgba(188, 179, 224, 1) 100%
+                ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005ad1', endColorstr='#bcb3e0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                @include flex-box(
+                    $content: space-between,
+                    $direction: column,
+                    $items: flex-start
+                );
+                color: $color;
+                .liked {
+                    @include flex-box($gap: 0.5rem);
+                    flex-wrap: wrap;
+                    margin: 0;
+                    padding: 0;
+                    li:nth-child(1) {
+                        list-style-type: none;
+                    }
+                    .artist {
+                        margin-right: 1rem;
+                        font-size: 1rem;
+                        span {
+                            margin: 0;
+                        }
+                        .title {
+                            color: darken($color, 25);
+                        }
+                    }
+                }
+                .bottom {
+                    h4 {
+                        font-size: 2rem;
+                        margin: 0;
+                    }
+                    p {
+                        margin: 0;
+                    }
+                }
+                @media #{media-query-param(5)} {
+                    div:nth-child(1) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    .arrows {
+        .menu-option {
+            @include flex-box($gap: 0);
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li {
+                padding: 0.5rem 0.7rem;
+                color: white;
+                cursor: pointer;
+                @include box-radius(5px);
+                font-size: 0.9rem;
+            }
+            .active {
+                background-color: #ccc3;
+            }
+        }
+    }
+
+    .right {
+        .links {
+            display: none;
+            @media #{media-query-param(4)} {
+                display: flex;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@mixin listing-header($color: white) {
+    @include flex-box($items: flex-end);
+    position: relative;
+    .heading {
+        color: $color;
+        @include flex-box($direction: column, $items: flex-start, $gap: 0.3rem);
+        h3 {
+            @include responsive-heading(2rem);
+            &:hover {
+                text-decoration: underline;
+            }
+            margin: 0;
+        }
+        p {
+            @include paragraph(1rem);
+            color: darken($color, 30);
+            margin: 0;
+        }
+    }
+    .view-more {
+        position: absolute;
+        color: darken($color, 30);
+        @include responsive-heading(1.2rem);
+        right: 1rem;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../Spotify-Template/Root-Template/scss/mixins/heading-block.scss"
+    ],
+    "names": [],
+    "file": "heading-block.css"
+}

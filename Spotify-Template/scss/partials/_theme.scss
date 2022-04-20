@@ -1,0 +1,36 @@
+@mixin theme($background-color: rgb(93, 68, 204)) {
+    aspect-ratio: 1/1;
+    width: 100%;
+    background-color: $background-color;
+    position: relative;
+    overflow: hidden;
+    padding: 1.2rem;
+    cursor: pointer;
+    @include box-radius(0.5rem);
+    p {
+        position: relative;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+        z-index: 2;
+    }
+    img {
+        $spacing: -1.3rem;
+        z-index: 0;
+        $size: 6rem;
+        object-fit: cover;
+        width: $size;
+        height: $size;
+        position: absolute;
+        bottom: $spacing + 0.7rem;
+        right: $spacing + 0.6rem;
+        transform: rotate(20deg);
+        box-shadow: 0 0 0.5rem #0006;
+    }
+}
+
+// <div class="theme">
+//     <p>Podcast</p>
+//     <img src="src/your-name.jpg" alt="">
+// </div>

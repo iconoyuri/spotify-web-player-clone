@@ -1,0 +1,11 @@
+@mixin line-clamp($number: 1, $orient: vertical) {
+    display: -webkit-box;
+    -webkit-box-orient: $orient;
+    -webkit-line-clamp: $number;
+    overflow: hidden;
+}
+@mixin truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

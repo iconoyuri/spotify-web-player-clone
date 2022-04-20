@@ -1,0 +1,10 @@
+$first-screen-break: 1920px !default;
+$second-screen-break: 1600px !default;
+$third-screen-break: 1200px !default;
+$fourth-screen-break: 1024px !default;
+$fifth-screen-break: 768px !default;
+$sixth-screen-break: 480px !default;
+
+@import "colors";
+@import "responsive";
+@import "conversion";

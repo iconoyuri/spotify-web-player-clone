@@ -1,0 +1,4 @@
+@mixin shadow-box($shadow: 0 0 5px #0005, $ztrl: 0.8rem) {
+    filter: drop-shadow($shadow);
+    transform: translateZ($ztrl);
+}

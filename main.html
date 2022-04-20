@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/main-stylesheet.css" />
+    </head>
+    <body>
+        <article class="lateral-menu side">
+            <div class="top">
+                <p class="logo">
+                    <svg
+                        viewBox="0 0 63 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMidYMin meet"
+                    >
+                        <g fill-rule="evenodd" class="svelte-1gcdbl9">
+                            <path
+                                d="M61.842 9.506a1.02 1.02 0 0 1-1.023-1.024c0-.562.453-1.03 1.029-1.03a1.02 1.02 0 0 1 1.023 1.024 1.03 1.03 0 0 1-1.029 1.03m.006-1.952a.915.915 0 0 0-.922.928c0 .51.394.921.916.921a.916.916 0 0 0 .922-.927.908.908 0 0 0-.916-.922m.226 1.027l.29.406h-.244l-.26-.372h-.225v.372h-.204V7.912h.48c.249 0 .413.128.413.343 0 .176-.102.284-.25.326m-.172-.485h-.267v.34h.267c.133 0 .212-.065.212-.17 0-.11-.08-.17-.212-.17m-12.804-3.52a1.043 1.043 0 1 0-.001 2.086 1.043 1.043 0 0 0 0-2.087m.72 2.89h-1.454a.107.107 0 0 0-.106.107v6.346c0 .06.047.107.106.107h1.455a.107.107 0 0 0 .107-.107V7.572a.107.107 0 0 0-.107-.107m3.233.006v-.2c0-.592.227-.856.736-.856.303 0 .546.06.82.152a.106.106 0 0 0 .14-.102V5.24a.107.107 0 0 0-.076-.102 3.993 3.993 0 0 0-1.21-.174c-1.343 0-2.053.757-2.053 2.188v.308h-.699a.107.107 0 0 0-.107.106v1.257c0 .059.048.107.107.107h.699v4.99c0 .058.047.106.106.106h1.455a.107.107 0 0 0 .106-.107v-4.99h1.358l2.081 4.99c-.236.523-.468.628-.785.628-.257 0-.527-.077-.803-.228a.109.109 0 0 0-.084-.008.106.106 0 0 0-.063.058l-.493 1.081a.106.106 0 0 0 .045.138c.515.279.98.398 1.554.398 1.074 0 1.668-.5 2.191-1.847L60.6 7.617a.106.106 0 0 0-.099-.146h-1.514a.107.107 0 0 0-.1.072l-1.552 4.431-1.7-4.434a.106.106 0 0 0-.099-.069h-2.485m-5.577-.006h-1.6V5.828a.106.106 0 0 0-.107-.106h-1.455a.107.107 0 0 0-.106.106v1.637h-.7a.106.106 0 0 0-.106.107v1.25c0 .059.048.107.106.107h.7v3.234c0 1.308.65 1.97 1.934 1.97.522 0 .954-.107 1.362-.338a.106.106 0 0 0 .054-.093v-1.19a.106.106 0 0 0-.154-.096c-.28.141-.551.206-.854.206-.467 0-.675-.211-.675-.686V8.929h1.6a.106.106 0 0 0 .107-.107v-1.25a.106.106 0 0 0-.106-.107m-7.671-.133c-1.96 0-3.497 1.51-3.497 3.437 0 1.907 1.526 3.4 3.473 3.4 1.967 0 3.508-1.504 3.508-3.424 0-1.914-1.53-3.413-3.484-3.413m0 5.362c-1.043 0-1.83-.838-1.83-1.95 0-1.115.76-1.924 1.806-1.924 1.05 0 1.84.838 1.84 1.95 0 1.115-.763 1.924-1.816 1.924m-7.014-5.362c-.82 0-1.492.323-2.046.984v-.744a.107.107 0 0 0-.106-.107h-1.455a.107.107 0 0 0-.106.107v8.27c0 .058.048.106.106.106h1.455a.107.107 0 0 0 .106-.106v-2.61c.555.621 1.227.925 2.046.925 1.522 0 3.063-1.172 3.063-3.412s-1.54-3.413-3.063-3.413m1.372 3.413c0 1.14-.703 1.937-1.709 1.937-.995 0-1.745-.833-1.745-1.937s.75-1.937 1.745-1.937c.99 0 1.71.814 1.71 1.937m-8.437-1.81c-1.624-.388-1.913-.66-1.913-1.231 0-.54.508-.903 1.264-.903.732 0 1.459.275 2.22.843a.107.107 0 0 0 .15-.023l.794-1.119a.107.107 0 0 0-.02-.144c-.906-.728-1.927-1.081-3.12-1.081-1.755 0-2.98 1.052-2.98 2.559 0 1.615 1.057 2.187 2.884 2.628 1.554.358 1.817.658 1.817 1.195 0 .594-.53.963-1.385.963-.948 0-1.721-.32-2.587-1.068a.11.11 0 0 0-.078-.026.105.105 0 0 0-.073.038l-.89 1.058a.105.105 0 0 0 .011.148 5.303 5.303 0 0 0 3.581 1.373c1.89 0 3.112-1.033 3.112-2.631 0-1.351-.807-2.098-2.787-2.58M9.507.305a9.41 9.41 0 1 0 0 18.82 9.41 9.41 0 0 0 0-18.82m4.316 13.572a.586.586 0 0 1-.807.195c-2.21-1.35-4.99-1.655-8.266-.907a.586.586 0 1 1-.261-1.143c3.584-.82 6.659-.467 9.139 1.049.276.169.363.53.195.806m1.15-2.562a.734.734 0 0 1-1.008.242c-2.529-1.555-6.385-2.005-9.377-1.097a.735.735 0 0 1-.426-1.404c3.418-1.037 7.666-.534 10.57 1.25a.734.734 0 0 1 .242 1.01m.1-2.669C12.04 6.846 7.036 6.68 4.141 7.56a.88.88 0 1 1-.511-1.684c3.323-1.01 8.849-.814 12.34 1.258a.88.88 0 0 1-.898 1.514"
+                            ></path>
+                        </g>
+                    </svg>
+                </p>
+                <div class="lateral-menu">
+                    <div class="options">
+                        <a href="main.html">
+                            <div class="option active">
+                                <i class="fas fa-home"></i>
+                                <p>Accueil</p>
+                            </div>
+                        </a>
+                        <a href="search.html">
+                            <div class="option">
+                                <i class="fas fa-search"></i>
+                                <p>Rechercher</p>
+                            </div>
+                        </a>
+                        <a href="library.html">
+                            <div class="option">
+                                <svg
+                                    version="1.1"
+                                    id="Capa_1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px"
+                                    y="0px"
+                                    viewBox="0 0 477.992 477.992"
+                                    style="
+                                        enable-background: new 0 0 477.992
+                                            477.992;
+                                    "
+                                    xml:space="preserve"
+                                >
+                                    <path
+                                        d="M92.388,154.804H48.694c-2.761,0-5,2.239-5,5v273.085c0,2.761,2.239,5,5,5h43.694c2.761,0,5-2.239,5-5V159.804
+	C97.388,157.043,95.149,154.804,92.388,154.804z M87.388,427.889H53.694V164.804h33.694V427.889z M75.541,66.484v44.625h16.847
+	c2.761,0,5,2.239,5,5s-2.239,5-5,5H48.694c-2.761,0-5-2.239-5-5s2.239-5,5-5h16.847V66.484H48.694c-2.761,0-5-2.239-5-5
+	c0-2.761,2.239-5,5-5h43.694c2.761,0,5,2.239,5,5c0,2.761-2.239,5-5,5H75.541z M65.541,411.042v-10.825c0-2.761,2.239-5,5-5
+	s5,2.239,5,5v10.825c0,2.761-2.239,5-5,5S65.541,413.803,65.541,411.042z M65.541,370.198v-188.56c0-2.761,2.239-5,5-5s5,2.239,5,5
+	v188.56c0,2.761-2.239,5-5,5S65.541,372.959,65.541,370.198z M223.469,154.804h-43.694c-2.761,0-5,2.239-5,5v273.085
+	c0,2.761,2.239,5,5,5h43.694c2.761,0,5-2.239,5-5V159.804C228.469,157.043,226.23,154.804,223.469,154.804z M218.469,427.889
+	h-33.694V164.804h33.694V427.889z M223.469,66.484c2.761,0,5-2.239,5-5c0-2.761-2.239-5-5-5h-43.694c-2.761,0-5,2.239-5,5
+	c0,2.761,2.239,5,5,5h5.923v44.625h-5.923c-2.761,0-5,2.239-5,5s2.239,5,5,5h43.694c2.761,0,5-2.239,5-5s-2.239-5-5-5h-5.923V66.484
+	H223.469z M207.546,111.109h-11.847V66.484h11.847V111.109z M196.623,411.042v-10.825c0-2.761,2.239-5,5-5s5,2.239,5,5v10.825
+	c0,2.761-2.239,5-5,5S196.623,413.803,196.623,411.042z M196.623,370.198v-188.56c0-2.761,2.239-5,5-5s5,2.239,5,5v188.56
+	c0,2.761-2.239,5-5,5S196.623,372.959,196.623,370.198z M477.912,441.369L399.891,11.431c-0.236-1.305-0.982-2.462-2.072-3.217
+	c-1.09-0.755-2.436-1.045-3.74-0.81L272.163,29.528v-0.821c0-2.761-2.239-5-5-5H136.082H5c-2.761,0-5,2.239-5,5v436.96
+	c0,2.761,2.239,5,5,5h131.082h131.082c2.761,0,5-2.239,5-5V97.711l66.935,368.848c0.438,2.416,2.543,4.108,4.914,4.108
+	c0.296,0,0.597-0.026,0.898-0.082l128.975-23.405c1.305-0.237,2.462-0.982,3.217-2.072
+	C477.857,444.019,478.148,442.674,477.912,441.369z M10,33.707h121.082v426.96H10V33.707z M262.163,460.667H141.082V33.707h120.343
+	c-0.392,0.884-0.533,1.891-0.347,2.915l1.086,5.984V460.667z M348.044,459.854L272.163,41.706v-2.015l118.782-21.555l76.235,420.099
+	L348.044,459.854z M374.495,144.197l-42.992,7.801c-1.305,0.236-2.462,0.982-3.217,2.072c-0.755,1.09-1.046,2.436-0.81,3.74
+	l48.76,268.697c0.236,1.305,0.982,2.462,2.072,3.217c0.842,0.583,1.837,0.89,2.848,0.89c0.297,0,0.596-0.026,0.893-0.081
+	l42.992-7.802c2.717-0.493,4.52-3.095,4.027-5.812l-48.76-268.697C379.814,145.506,377.204,143.7,374.495,144.197z M385.183,419.802
+	l-46.975-258.858l33.152-6.016l46.975,258.857L385.183,419.802z M368.479,111.043C368.479,111.043,368.479,111.043,368.479,111.043
+	l10.748-1.95c2.717-0.493,4.52-3.095,4.027-5.813s-3.097-4.519-5.812-4.027l-5.828,1.058l-7.968-43.908l5.828-1.058
+	c2.717-0.493,4.52-3.095,4.027-5.813c-0.493-2.717-3.097-4.52-5.812-4.027L303.2,57.209c-2.717,0.493-4.52,3.095-4.027,5.813
+	c0.438,2.415,2.543,4.108,4.914,4.108c0.296,0,0.597-0.027,0.898-0.081l5.828-1.058l7.968,43.907l-5.828,1.058
+	c-2.717,0.493-4.52,3.095-4.027,5.813c0.438,2.415,2.543,4.108,4.914,4.108c0.296,0,0.597-0.027,0.898-0.081l53.739-9.752
+	C368.478,111.043,368.478,111.043,368.479,111.043z M361.774,102.096l-11.657,2.115l-7.968-43.908l11.657-2.115L361.774,102.096z
+	 M320.653,64.205l11.657-2.115l7.968,43.907l-11.657,2.115L320.653,64.205z M362.71,173.608l40.96,225.717
+	c0.493,2.717-1.31,5.319-4.027,5.812c-0.302,0.055-0.602,0.082-0.898,0.082c-2.371,0-4.476-1.693-4.914-4.108l-40.96-225.717
+	c-0.493-2.717,1.31-5.319,4.027-5.812C359.611,169.083,362.217,170.89,362.71,173.608z"
+                                    />
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                </svg>
+                                <p>Bibliothèque</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="options">
+                        <a href="playlist.html">
+                            <div class="option">
+                                <i class="fas fa-plus-square"></i>
+                                <p>Créer une playlist</p>
+                            </div>
+                        </a>
+                        <a href="likes.html">
+                            <div class="option">
+                                <i class="far fa-heart"></i>
+                                <p>Titres likés</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>Cookies</p>
+                <p>Confidentialité</p>
+            </div>
+        </article>
+        <nav class="nav">
+            <div class="arrows">
+                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="right">
+                <ul class="links">
+                    <li>Premium</li>
+                    <li>Assistance</li>
+                    <li>Télécharger</li>
+                </ul>
+                <div class="permanent-button">
+                    <p class="sign-up">S'inscrire</p>
+                    <p class="button">SE CONNECTER</p>
+                    <i class="pop-up-trigger fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        <main class="side">
+            <article>
+                <section class="listing-round">
+                    <div class="listing-header">
+                        <div class="heading">
+                            <h3>Ecoutés récemment</h3>
+                            <p></p>
+                        </div>
+                        <p class="view-more">VOIR PLUS</p>
+                    </div>
+
+                    <div class="listing-cards">
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">All Might</p>
+                                    <p class="details">
+                                        My hero academia soundtrack
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">All Might</p>
+                                    <p class="details">
+                                        My hero academia soundtrack
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="listing">
+                    <div class="listing-header">
+                        <div class="heading">
+                            <h3>Focus</h3>
+                            <p>De la musique pour rester concentré</p>
+                        </div>
+                        <p class="view-more">VOIR PLUS</p>
+                    </div>
+
+                    <div class="listing-cards">
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="listing">
+                    <div class="listing-header">
+                        <div class="heading">
+                            <h3>Focus</h3>
+                            <p>De la musique pour rester concentré</p>
+                        </div>
+                        <p class="view-more">VOIR PLUS</p>
+                    </div>
+
+                    <div class="listing-cards">
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card">
+                                <div class="img-container">
+                                    <img src="src/allMight.jpg" alt="" />
+                                </div>
+                                <div class="texts-container">
+                                    <p class="title">Today's Top Hits</p>
+                                    <p class="details">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Itaque, a?
+                                    </p>
+                                </div>
+                                <i class="play fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <footer class="footer">
+                <div class="top">
+                    <ul class="links-grid">
+                        <li>
+                            SOCIETE
+                            <ul>
+                                <li>À propos</li>
+                                <li>Offres d'emploi</li>
+                                <li>For the Record</li>
+                            </ul>
+                        </li>
+                        <li>
+                            COMMUNAUTES
+                            <ul>
+                                <li>Pour les artistes</li>
+                                <li>Développeurs</li>
+                                <li>Campagnes publicitaires</li>
+                                <li>Investisseurs</li>
+                                <li>Fournisseurs</li>
+                            </ul>
+                        </li>
+                        <li>
+                            LIENS UTILES
+                            <ul>
+                                <li>Assistance</li>
+                                <li>Lecteur Web</li>
+                                <li>Appli mobile gratuite</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="icons">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="abouts">
+                        <p>Légal</p>
+                        <p>Centre de confidentialité</p>
+                        <p>Politique de confidentialité</p>
+                        <p>Cookies</p>
+                        <p>À propos des pubs</p>
+                        <p>Additional CA Privacy Disclosures</p>
+                    </div>
+                    <div class="copyrights">
+                        <p>&copy; 2021 Spotify AB</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <div class="music-player-container">
+            <div class="music-player" id="musicPlayer">
+                <div class="music-info">
+                    <div class="image-container">
+                        <img src="src/cover.jpg" alt="" />
+                    </div>
+                    <div class="sound-info">
+                        <p class="title">The title of the music file</p>
+                        <p class="artist">The artist's name</p>
+                    </div>
+                    <div class="first-icons">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-compress-arrows-alt"></i>
+                    </div>
+                </div>
+                <div class="control-board">
+                    <audio src="" hidden></audio>
+                    <div class="buttons">
+                        <i class="fas fa-random"></i>
+                        <i id="prev" class="fas fa-step-backward"></i>
+                        <i
+                            id="play"
+                            class="play-pause fas fa-pause fa-play"
+                        ></i>
+                        <i id="next" class="fas fa-step-forward"></i>
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <div class="progress-part">
+                        <span class="time-elapsed"></span>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <span class="song-duration"></span>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <i class="fas fa-list"></i>
+                    <i class="fas fa-tv"></i>
+                    <div class="volume-board">
+                        <i class="fas fa-volume-up"></i>
+                        <div class="volume-bar">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <audio src="src/songs/song1.mp3" id="audio"></audio>
+        </div>
+        <script src="javascript/music-player.js"></script>
+        <script src="javascript/pop-up-window.js"></script>
+    </body>
+</html>

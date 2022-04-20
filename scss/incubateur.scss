@@ -1,0 +1,86 @@
+@import url("//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book");
+@import "../Spotify-Template/spotify-template";
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #555;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    min-width: 650px;
+    user-select: none;
+    font-family: "circular std book", sans-serif;
+}
+
+.modal-window {
+    background-color: #222;
+    color: white;
+    position: relative;
+    padding: 1.5rem;
+    width: 40rem;
+    height: 30rem;
+    display: none;;
+    & > div {
+        display: grid;
+        grid-template-columns: 3fr 5fr;
+        grid-template-rows: 1fr 4fr;
+        padding: 1.5rem;
+        grid-gap: 1rem;
+        & > div {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            background-color: #2a2a2a;
+            position: relative;
+            @include flex-box($content: center);
+            aspect-ratio: 1/1;
+            i {
+                &:nth-child(1) {
+                    font-size: 3rem;
+                }
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                    padding: .4rem;
+                    background-color: #1115;
+                    border-radius: 50%;
+                }
+            }
+        }
+        input,
+        textarea {
+            background-color: #2f2f2f;
+            border: none;
+            outline: none;
+            padding: 0.5rem;
+            color: white;
+            resize: none;
+        }
+        input {
+            font-weight: bold;
+        }
+    }
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    .save-button {
+        width: 100%;
+        @include flex-box($content: flex-end);
+        .button {
+            @include button;
+            @include box-radius;
+            padding: 0.8rem 1.5rem;
+            letter-spacing: 0.2rem;
+        }
+    }
+    .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}

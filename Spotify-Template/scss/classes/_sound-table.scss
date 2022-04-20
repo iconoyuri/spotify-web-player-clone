@@ -1,0 +1,66 @@
+.list-sound {
+    @include list-sound;
+}
+
+.sound-table {
+    $color: white;
+    $second-color: darken($color, 25);
+    width: 100%;
+    padding: 0 2rem;
+    color: $second-color;
+    @include flex-box($direction: column, $gap: 0.5rem);
+    tr {
+        border-radius: 3px;
+        flex-shrink: 1;
+        @include grid-box($share: 1.5rem 10fr 8fr 5fr 4fr, $gap: 2rem);
+        width: 100%;
+        padding: 0 1rem;
+        &:nth-child(1) {
+            padding: 0.7rem 1rem;
+            margin: 1rem 0;
+            border-bottom: 1px solid darken($color, 60);
+            td:nth-child(5) {
+                display: block;
+                i {
+                    color: $second-color;
+                }
+            }
+            &:hover {
+                background-color: #0000;
+            }
+        }
+        td {
+            @include line-clamp(2);
+            &:nth-child(1) {
+                i {
+                    font-size: 0.8rem;
+                }
+            }
+            &:nth-child(5) {
+                text-align: right;
+                @include flex-box($content: flex-end);
+                div {
+                    @include grid-box($share: 0.5rem 2.5rem);
+                    i {
+                        color: #1d5;
+                    }
+                }
+            }
+        }
+        @media #{custom-query-param(1050px)} {
+            @include grid-box($share: 1.5rem 10fr 8fr 4fr, $gap: 2rem);
+            td:nth-child(4) {
+                display: none;
+            }
+        }
+        @media #{custom-query-param(900px)} {
+                @include grid-box($share: 1.5rem 10fr 4fr, $gap: 2rem);
+            td:nth-child(3) {
+                display: none;
+            }
+        }
+        &:hover {
+            background-color: #ccc2;
+        }
+    }
+}

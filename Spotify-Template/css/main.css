@@ -1,0 +1,91 @@
+@import url("//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "circular std book", sans-serif;
+}
+
+:root {
+  --lateral-size: 200px;
+  --lateral-size-right: calc(100% - var(--lateral-size));
+}
+
+body {
+  background-color: #111;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100vh;
+  min-width: 650px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .side:nth-child(2) {
+  width: var(--lateral-size-right);
+  margin: 0;
+}
+
+body .lateral-menu {
+  width: var(--lateral-size);
+}
+
+body nav {
+  margin-left: var(--lateral-size);
+  z-index: 1;
+  position: fixed;
+  width: var(--lateral-size-right);
+}
+
+body main {
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+body main article {
+  margin: 5rem 0 0 0;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(143, 143, 143, 0.274);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*# sourceMappingURL=main.css.map */

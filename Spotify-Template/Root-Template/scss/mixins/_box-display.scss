@@ -1,0 +1,24 @@
+@mixin flex-box(
+    $content: flex-start,
+    $direction: row,
+    $items: center,
+    $gap: 2rem
+) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $items;
+    gap: $gap;
+}
+
+@mixin grid-box(  
+    $share: 1fr 1fr 1fr,
+    $items: center,
+    $gap: 2rem
+) {
+    display: grid;
+    grid-template-columns: $share;
+    align-items: $items;
+    grid-gap: $gap;
+}
+

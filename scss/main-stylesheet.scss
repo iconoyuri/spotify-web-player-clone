@@ -1,0 +1,58 @@
+@import url("//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book");
+@import "../Spotify-Template/spotify-template";
+
+* {
+    box-sizing: border-box;
+    font-family: "circular std book", sans-serif;
+}
+
+:root {
+    --lateral-size: 200px;
+    --lateral-size-right: calc(100% - var(--lateral-size));
+}
+
+body {
+    background-color: #111;
+    margin: 0;
+    padding: 0;
+    // display: flex;
+    // flex-direction: row;
+    display: grid;
+    grid-template-columns: var(--lateral-size) 1fr;
+    grid-template-rows: 1fr 6.5rem;
+    height: 100vh;
+    min-width: 750px;
+    user-select: none;
+    .side {
+        &:nth-child(2) {
+            width: var(--lateral-size-right);
+            margin: 0;
+        }
+    }
+    .lateral-menu {
+        width: var(--lateral-size);
+        min-height: 500px;
+        // flex-shrink: 0;
+    }
+    nav {
+        margin-left: var(--lateral-size);
+        z-index: 1;
+        position: fixed;
+        width: var(--lateral-size-right);
+    }
+    main {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        width: 100%;
+        article {
+            margin: 5rem 0 0 0;
+            padding: 1.5rem 1.5rem 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            width: 100%;
+        }
+    }
+}

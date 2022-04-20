@@ -1,0 +1,13 @@
+@mixin round-icon(
+    $color: white,
+    $hover-color: $color,
+    $size: 1rem,
+    $padding: $size,
+    $background-color: rgba($color, .1)
+) {
+    cursor: pointer;
+    font-size: $size;
+    @include round-box($padding: $padding);
+    @include color-hover($color, $hover-color);
+    background-color: $background-color;
+}

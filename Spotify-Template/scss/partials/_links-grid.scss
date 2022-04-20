@@ -1,0 +1,28 @@
+@mixin links-grid(
+    $color: white,
+    $hover-color: darken($color, 10),
+    $headers-color: $hover-color
+) {
+    @include grid-box($share: 1fr 1fr 1fr, $gap: rem(90), $items: initial);
+    li {
+        list-style-type: none;
+    }
+    &>li {
+        @include paragraph;
+        margin: 1rem 0;
+        color: darken($color, 30);
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+            margin-top: 1rem;
+            @include flex-box($direction: column, $items: flex-start);
+            & > li {
+                @include color-hover($color, $hover-color);
+            }
+        }
+    }
+    @media #{media-query-param(4)} {
+        @include flex-box($direction: column, $gap: 0rem, $items: flex-start);
+    }
+}
+

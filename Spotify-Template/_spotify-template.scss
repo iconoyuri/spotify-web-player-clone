@@ -1,0 +1,23 @@
+@import "Root-Template/scss/template.scss";
+@import "scss/partials/all";
+@import "scss/classes/all";
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(143, 143, 143, 0.274);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+a {
+    text-decoration: none;
+}

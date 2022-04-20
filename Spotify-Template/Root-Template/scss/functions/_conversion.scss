@@ -1,0 +1,4 @@
+$common-base: 16 !default;
+@function rem($size, $base: $common-base){
+    @return ($size / $base) * 1rem;
+}

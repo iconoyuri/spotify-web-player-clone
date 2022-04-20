@@ -1,0 +1,42 @@
+@mixin round-input(
+    $color: #000,
+    $background-color: default-color($color),
+    $size: 1rem
+) {
+    @include search-input($color, $background-color, $size );
+    @include box-radius();
+}
+
+@mixin search-input(
+    $color: #000,
+    $background-color: default-color($color),
+    $size: 1rem
+) {
+    @include flex-box($gap: $size * 0.8);
+    background-color: $background-color;
+    padding: 0.3rem $size * 0.7;
+    i,
+    input {
+        color: $color;
+        margin: 0;
+        background-color: $background-color;
+        padding: 0;
+    }
+    i {
+        font-size: $size * 1.3;
+    }
+    input {
+        font-size: $size;
+        border: none;
+        outline: none;
+        width: 100%;
+        &:placeholder-shown + i {
+            visibility: hidden;
+            pointer-events: none;
+        }
+        &:not(:placeholder-shown) + i {
+            visibility: visible;
+            pointer-events: auto;
+        }
+    }
+}

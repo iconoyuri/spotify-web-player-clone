@@ -1,0 +1,103 @@
+@mixin responsive-listing-grid($add: 0, $gap: 1rem) {
+    @media #{custom-query-param(1920px)} {
+        @include grid-box($share: repeat(7 + $add, 1fr), $gap: $gap);
+    }
+    @media #{custom-query-param(1700px)} {
+        @include grid-box($share: repeat(6 + $add, 1fr), $gap: $gap);
+    }
+    @media #{custom-query-param(1500px)} {
+        @include grid-box($share: repeat(5 + $add, 1fr), $gap: $gap);
+    }
+    @media #{custom-query-param(1200px)} {
+        @include grid-box($share: repeat(4 + $add, 1fr), $gap: $gap);
+    }
+    @media #{custom-query-param(1024px)} {
+        @include grid-box($share: repeat(3 + $add, 1fr), $gap: $gap);
+    }
+    @media #{custom-query-param(768px)} {
+        @include grid-box($share: repeat(2 + $add, 1fr), $gap: $gap);
+    }
+    @media #{custom-query-param(480px)} {
+        @include grid-box($share: repeat(1 + $add, 1fr), $gap: $gap);
+    }
+}
+@mixin listing($type: "regular", $closable: "false", $height: 17rem) {
+    @include flex-box($direction: column, $gap: 1.5rem);
+    .listing-header {
+        @include listing-header();
+        width: 100%;
+    }
+    .listing-cards {
+        width: 100%;
+        overflow: hidden;
+        height: $height;
+        @include grid-box($share: repeat(9, 1fr), $gap: 1rem);
+        @include responsive-listing-grid();
+        & > div {
+            @include flex-box($direction: column, $items: flex-start);
+            .card {
+                cursor: pointer;
+                @if ($type == "regular") {
+                    @include listing-card($padding: 1rem, $size: 1rem);
+                }
+                @if ($type == "round") {
+                    @if ($closable== "true") {
+                        @include listing-card-round($height: $height - 5rem, $closable: "true");
+                    } @else {
+                        @include listing-card-round($height: $height - 5rem);
+                    }
+                }
+            }
+        }
+    }
+}
+.listing {
+    @include listing("regular");
+}
+.listing-round {
+    @include listing("round", $height: 18rem);
+}
+.listing-theme {
+    @include flex-box($direction: column, $gap: 1.5rem);
+    width: 100%;
+    .listing-header {
+        width: 100%;
+        @include listing-header();
+    }
+    .listing-cards {
+        @include grid-box($share: repeat(9, 1fr), $gap: 1.5rem);
+        @include responsive-listing-grid();
+        width: 100%;
+        .theme {
+            @include theme;
+        }
+    }
+}
+
+//  <div class="listing">
+//             <div class="listing-header">
+//                 <div class="heading">
+//                     <h3>Focus</h3>
+//                     <p>De la musique pour rester concentré</p>
+//                 </div>
+//                 <p class="view-more">VOIR PLUS</p>
+//             </div>
+
+//             <div class="listing-cards">
+//                 <div>
+//                     <div class="card">
+//                         <div class="img-container">
+//                             <img src="allMight.jpg" alt="" />
+//                             <i class="fas fa-play"></i>
+//                         </div>
+//                         <div class="texts-container">
+//                             <p class="title">Today's Top Hits</p>
+//                             <p class="details">
+//                                 Lorem ipsum dolor sit amet consectetur
+//                                 adipisicing elit. Itaque, a?
+//                             </p>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>

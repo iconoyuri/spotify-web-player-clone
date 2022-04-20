@@ -1,0 +1,43 @@
+@mixin list-sound($color: white, $second-color: darken($color, 25)) {
+    color: $color;
+    @include flex-box($gap: 0.5rem);
+    height: 3rem;
+    .img-container {
+        height: 90%;
+        img {
+            aspect-ratio: 1/1;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .song-inf {
+        @include flex-box($direction: column, $items: flex-start, $gap: 0.2rem);
+        p {
+            margin: 0;
+            &:nth-child(1) {
+                @include line-clamp;
+            }
+            &:nth-child(2) {
+                font-size: 0.8em;
+                color: $second-color;
+                @include line-clamp;
+            }
+            i {
+                background-color: $second-color;
+                padding: 0.1em 0.2em;
+                color: default-color($color);
+                border-radius: 2px;
+            }
+        }
+    }
+}
+
+// <div class="list-sound">
+//     <div class="img-container">
+//         <img src="src/allMight.jpg" alt="" />
+//     </div>
+//     <div class="song-inf">
+//         <p class="title">Le titre du son</p>
+//         <p class="artist"><i class="fab fa-etsy"></i> Le reste je suppose</p>
+//     </div>
+// </div>

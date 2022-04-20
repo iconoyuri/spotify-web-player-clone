@@ -1,0 +1,26 @@
+@mixin icon-text-line($color: white, $padding: 0.1rem 1rem) {
+    @include grid-box($share: 2fr 9fr, $gap: 1rem);
+    @include color-hover(darken($color, 45), $color);
+    width: 100%;
+    padding: $padding;
+    i,
+    img,
+    svg {
+        width: 100%;
+    }
+    p {
+        font-weight: bold;
+        width: 100%;
+    }
+}
+
+@mixin block-icon-text($margin: 0.5rem 0, $gap: 0rem) {
+    @include flex-box($direction: column, $gap: $gap, $items: flex-start);
+    margin: $margin;
+    width: 100%;
+    .option {
+        @include icon-text-line();
+        @include box-radius(4px);
+        cursor: pointer;
+    }
+}

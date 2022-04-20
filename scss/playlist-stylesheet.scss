@@ -1,0 +1,198 @@
+@import url("//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book");
+@import "../Spotify-Template/spotify-template";
+
+* {
+    box-sizing: border-box;
+    font-family: "circular std book", sans-serif;
+}
+
+.nav {
+    .arrows {
+        i:nth-child(2) {
+            opacity: 0.6;
+        }
+    }
+}
+
+.heading-block {
+    @include heading-block;
+    .right {
+        h1 {
+            cursor: pointer;
+            font-size: 5rem;
+            @media #{custom-query-param(980px)} {
+                font-size: 3.5rem;
+            }
+            @media #{custom-query-param(820px)} {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    width: 100%;
+    margin: 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#777+0,222+100 */
+    background: #777; /* Old browsers */
+    background: -moz-linear-gradient(top, #777 0%, #222 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+        top,
+        #777 0%,
+        #222 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+        to bottom,
+        #777 0%,
+        #222 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777', endColorstr='#222',GradientType=0 ); /* IE6-9 */
+    .image {
+        background: #2a2a2a;
+    }
+}
+
+.side {
+    @include flex-box($direction: column, $items: flex-start, $gap: 1rem);
+
+    article {
+        &:nth-child(1) {
+            margin: 0;
+            padding: 0;
+        }
+        margin: 0 !important;
+        section {
+            margin: 0 !important;
+        }
+        .buttons {
+            margin: 0;
+            padding: 0 1rem;
+            i {
+                color: #bbb;
+                font-size: 1rem;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    background-color: #0000;
+}
+
+.search-box {
+    @include flex-box($content: space-between, $gap: 2rem);
+    color: white;
+    p,
+    h2 {
+        margin: 0;
+        padding: 0.5rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        @media #{media-query-param(4)} {
+            font-size: 1.2rem;
+        }
+    }
+    .search-bar {
+        @include search-input($color: white);
+        background-color: #222;
+        input,
+        i {
+            background-color: #222;
+        }
+        input {
+            padding: 0.5rem;
+        }
+    }
+}
+
+.modal-window {
+    background-color: #222;
+    color: white;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    width: 30rem;
+    display: none;
+    z-index: 2;
+    & > div {
+        display: grid;
+        grid-template-columns: 3fr 5fr;
+        grid-template-rows: 1fr 4fr;
+        padding: 1rem;
+        grid-gap: 1rem;
+        & > div {
+            width: 100%;
+            height: 100%;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            background-color: #2a2a2a;
+            position: relative;
+            @include flex-box($content: center);
+            aspect-ratio: 1/1;
+            i {
+                &:nth-child(1) {
+                    font-size: 3rem;
+                }
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                    padding: 0.4rem;
+                    background-color: #1115;
+                    border-radius: 50%;
+                }
+            }
+        }
+        input,
+        textarea {
+            width: 100%;
+            background-color: #2f2f2f;
+            border: none;
+            outline: none;
+            padding: 0.5rem;
+            color: white;
+            resize: none;
+        }
+        input {
+            font-weight: bold;
+        }
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 0.8rem;
+    }
+    .save-button {
+        width: 100%;
+        @include flex-box($content: flex-end);
+        .button {
+            @include button;
+            @include box-radius;
+            padding: 0.6rem 1.3rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.2rem;
+        }
+    }
+    .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+.visible {
+    display: block;
+}
+
+.blured {
+    article,
+    nav,
+    main {
+        filter: brightness(0.5);
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../Spotify-Template/Root-Template/scss/template.scss",
+        "../Spotify-Template/Root-Template/scss/functions/_all.scss",
+        "../Spotify-Template/Root-Template/scss/functions/_colors.scss",
+        "../Spotify-Template/Root-Template/scss/functions/_responsive.scss",
+        "../Spotify-Template/Root-Template/scss/functions/_conversion.scss",
+        "../Spotify-Template/Root-Template/scss/mixins/_all.scss",
+        "../Spotify-Template/Root-Template/scss/mixins/_box-display.scss",
+        "../Spotify-Template/Root-Template/scss/mixins/_box-style.scss",
+        "../Spotify-Template/Root-Template/scss/mixins/_buttons.scss",
+        "../Spotify-Template/Root-Template/scss/mixins/_headings.scss",
+        "../Spotify-Template/Root-Template/scss/mixins/_forms.scss",
+        "../Spotify-Template/Root-Template/scss/mixins/_line-clamp.scss",
+        "../Spotify-Template/Root-Template/scss/mixins/_shadow-box.scss",
+        "../Spotify-Template/Root-Template/scss/mixins/_color-hover.scss"
+    ],
+    "names": [],
+    "file": "template.css"
+}

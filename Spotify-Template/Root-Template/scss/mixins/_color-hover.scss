@@ -1,0 +1,10 @@
+@mixin color-hover($color, $hover-color: darken($color, 10)) {
+    transition: color 0.3s;
+    cursor: pointer;
+    color: $color;
+    fill: $color;
+    &:hover {
+        color: $hover-color;
+        fill: $hover-color;
+    }
+}

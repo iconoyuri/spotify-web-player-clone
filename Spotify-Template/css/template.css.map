@@ -1,0 +1,22 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../Root-Template/scss/template.scss",
+        "../Root-Template/scss/functions/_all.scss",
+        "../Root-Template/scss/functions/_colors.scss",
+        "../Root-Template/scss/functions/_responsive.scss",
+        "../Root-Template/scss/functions/_conversion.scss",
+        "../Root-Template/scss/mixins/_all.scss",
+        "../Root-Template/scss/mixins/_box-display.scss",
+        "../Root-Template/scss/mixins/_box-style.scss",
+        "../Root-Template/scss/mixins/_buttons.scss",
+        "../Root-Template/scss/mixins/_headings.scss",
+        "../Root-Template/scss/mixins/_forms.scss",
+        "../Root-Template/scss/mixins/_line-clamp.scss",
+        "../Root-Template/scss/mixins/_shadow-box.scss",
+        "../Root-Template/scss/mixins/_color-hover.scss"
+    ],
+    "names": [],
+    "file": "template.css"
+}

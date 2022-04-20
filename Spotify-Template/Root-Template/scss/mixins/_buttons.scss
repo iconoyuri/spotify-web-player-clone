@@ -1,0 +1,20 @@
+@mixin button(
+    $size: 1rem,
+    $padding: $size,
+    $width: auto,
+    $spacing: 0rem,
+    $color: black,
+    $background-color: default-color($color)
+) {
+    width: $width;
+    padding: $padding;
+    text-align: center;
+    display: block;
+    letter-spacing: $spacing;
+    font-weight: bold;
+    color: $color;
+    background-color: $background-color;
+    user-select: none;
+    cursor: pointer;
+    @include truncate-text;
+}

@@ -1,0 +1,18 @@
+@mixin box-radius($radius: 30rem){
+    border-radius: $radius;
+}
+
+@mixin box-border($color: black, $size: 1px, $style: solid){
+    border: $color $size $style;
+}
+
+@mixin round-box($size: 1rem, $padding: $size){
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $size;
+    height: $size;
+    padding: $padding;
+    @include box-radius(50%);
+}

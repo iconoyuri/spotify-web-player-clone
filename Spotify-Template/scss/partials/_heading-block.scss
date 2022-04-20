@@ -1,0 +1,62 @@
+@mixin heading-block($color: white, $type: "regular") {
+    @include flex-box($gap: 2rem, $items: flex-end);
+    padding: 6rem 1rem 1rem 2rem;
+    margin: 0;
+    color: $color;
+    p {
+        margin: 0;
+    }
+    .image {
+        flex-shrink: 0;
+        --dims: 12rem;
+        width: var(--dims);
+        height: var(--dims);
+        font-size: var(--dims);
+        box-shadow: 0 0 5rem #0008, 0 0 7rem #0006;
+        @include flex-box($content: center);
+        @if ($type== "round") {
+            border-radius: 50%;
+        }
+        i {
+            font-size: 0.3em;
+        }
+        @media #{media-query-param(4)} {
+            --dims: 10rem;
+        }
+    }
+    .right {
+        @include flex-box($direction: column, $gap: 0.5rem, $items: flex-start);
+        h1 {
+            font-size: 6rem;
+            @media #{media-query-param(4)}{
+                font-size: 5rem;
+            }
+            @media #{custom-query-param(820px)}{
+                font-size: 3.5rem;
+            }
+            margin: 0;
+        }
+        p {
+            font-size: .9rem;
+            font-weight: bold;
+            .titles {
+                font-weight: lighter;
+                color: darken($color, 20);
+            }
+        }
+    }
+}
+
+// <section class="heading-block">
+//     <div class="image">
+//         <i class="fas fa-heart"></i>
+//     </div>
+//     <div class="right">
+//         <p>PLAYLIST</p>
+//         <h1>Titres likés</h1>
+//         <p>
+//             <span class="name">yuri</span>
+//             <span class="titles">&SmallCircle; 3 titres</span>
+//         </p>
+//     </div>
+// </section>

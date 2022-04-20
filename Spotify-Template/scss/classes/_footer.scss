@@ -1,0 +1,103 @@
+.footer {
+    $hover-color: #1ed760;
+    background-color: black;
+    padding: 2rem 0 0 0;
+    .top {
+        @include flex-box($content: space-between, $items: flex-start);
+        .links-grid {
+            @include links-grid($hover-color: $hover-color);
+        }
+        .icons {
+            padding: 0 1rem;
+            @include flex-box($gap: 0.5rem);
+            i {
+                @include round-icon(
+                    $hover-color: $hover-color,
+                    $size: 1.2rem,
+                    $padding: 1.5rem
+                );
+            }
+        }
+        @media #{media-query-param(4)} {
+            @include flex-box($direction: column, $items: flex-start);
+        }
+    }
+    .bottom {
+        @include flex-box($content: space-between, $items: flex-start);
+        padding: 1rem;
+        // margin: 2rem 0;
+        & > div {
+            --copy-size: 200px;
+            &:nth-child(1) {
+                width: calc(100% - var(--copy-size));
+            }
+            &:nth-child(2) {
+                width: var(--copy-size);
+            }
+        }
+        .abouts {
+            @include flex-box($gap: 1rem, $items: flex-start);
+            flex-wrap: wrap;
+            p {
+                padding: 0;
+                margin: 0rem;
+                @include color-hover(
+                    $color: darken(white, 35),
+                    $hover-color: $hover-color
+                );
+                @include paragraph(0.8rem);
+            }
+        }
+        .copyrights {
+            color: darken(white, 35);
+            font-size: 0.8rem;
+            text-align: right;
+        }
+    }
+}
+
+// <footer class="footer">
+//             <div class="top">
+//                 <ul class="links-grid">
+//                     <li>
+//                         Testoda
+//                         <ul>
+//                             <li>A link</li>
+//                             <li>A link</li>
+//                         </ul>
+//                     </li>
+//                     <li>
+//                         Testoda
+//                         <ul>
+//                             <li>A link</li>
+//                             <li>A link</li>
+//                         </ul>
+//                     </li>
+//                     <li>
+//                         Testoda
+//                         <ul>
+//                             <li>A link</li>
+//                             <li>A link</li>
+//                         </ul>
+//                     </li>
+//                 </ul>
+//                 <div class="icons">
+//                     <i class="fas fa-chevron-down"></i>
+//                     <i class="fas fa-chevron-down"></i>
+//                     <i class="fas fa-chevron-down"></i>
+//                 </div>
+//             </div>
+//             <div class="bottom">
+//                 <div class="abouts">
+//                     <p>a text ..?</p>
+//                     <p>a text,f;:dsq ..?</p>
+//                     <p>a text ..jfiodsqjfkqsdm?</p>
+//                     <p>a text ..?</p>
+//                     <p>a text ..?</p>
+//                     <p>a text ..?</p>
+//                 </div>
+//                 <div class="copyrights">
+//                     <p>&copy; 2021 Spotify AB</p>
+//                 </div>
+//             </div>
+//         </footer>
